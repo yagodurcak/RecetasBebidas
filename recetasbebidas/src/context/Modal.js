@@ -14,7 +14,7 @@ const ModalProvider = (props) => {
         const ModalApi = async() => {
 
             const url =`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idbusqueda}`;
-            const api = await axios(url)
+            const api = await axios.get(url)
 
             setRecetaModal(api.data.drinks[0]);
             
